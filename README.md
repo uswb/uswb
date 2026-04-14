@@ -24,7 +24,15 @@ System umożliwia również obsługę płatności za zamówienia, zarówno onlin
 <img width="2558" height="1247" alt="image" src="https://github.com/user-attachments/assets/cfbaed1b-a8cc-4f51-89ab-ff0b21197ec8" />
 
 ### Komentarz
+Centralnym pojęciem w rozpatrywanej dziedzinie jest zamówienie. Każde zamówienie jest składane przez konkretnego klienta, zatem w przypadku częstego korzystania z systemu, przypisana do klienta historia może zawierać wiele zamówień (relacja jeden-do-wielu od strony klienta do zamówienia). Zamówienie jest zawsze skierowane do konkretnej restauracji lub sklepu (dostawcy), przy czym dany dostawca realizuje w systemie wiele zamówień (relacja jeden-do-wielu od restauracji do zamówienia).
 
+W ramach zamówienia rejestrowane są wybrane przez klienta produkty, co tworzy listę pozycji zamówienia (relacja jeden-do-wielu od zamówienia do pozycji zamówienia). Każda taka pozycja precyzuje wybrany produkt, jego zamawianą ilość, zamrożoną cenę oraz ewentualne uwagi (relacja jeden-do-wielu od produktu do pozycji). Produkty są przypisane do kartoteki konkretnej restauracji lub sklepu, która oferuje ich wiele (relacja jeden-do-wielu od restauracji do produktu). W przypadku restauracji produkt może dodatkowo posiadać zdefiniowane warianty (relacja jeden-do-wielu od produktu do wariantu).
+
+Użytkownikiem zamawiającym jest klient, który posiada w systemie własną kartotekę z danymi osobowymi i kontaktowymi. Klient musi posiadać utworzone konto dostępowe (relacja jeden-do-jednego między kontem a klientem). W systemie klient może zdefiniować więcej niż jeden adres dostawy (relacja jeden-do-wielu od klienta do adresu), natomiast każde konkretne zamówienie jest powiązane z dokładnie jednym, wybranym adresem (relacja jeden-do-wielu od adresu do zamówienia).
+
+Za fizyczną realizację procesu dostarczenia odpowiada kurier. Kurier posiada własną kartotekę określającą jego dostępność i dane kontaktowe. Może on mieć przypisanych wiele zamówień do doręczenia w ramach swojej historii pracy (relacja jeden-do-wielu od kuriera do zamówienia), przy czym konkretne zamówienie może być w danej chwili obsługiwane najwyżej przez jednego kuriera, który jest do niego przypisywany na podstawie lokalizacji (relacja zero-lub-jeden-do-wielu, gdyż nowo złożone zamówienie może jeszcze nie mieć przypisanego kuriera).
+
+Dodatkowo, proces finalizuje płatność. Każde zamówienie posiada powiązaną ze sobą transakcję płatniczą, określającą kwotę, status oraz metodę – online lub przy odbiorze (relacja jeden-do-jednego pomiędzy zamówieniem a płatnością). Zarządzaniem całokształtem danych, w tym dodawaniem nowych kartotek restauracji i sklepów oraz ich asortymentu, zajmuje się przypisany administrator systemu.
 
 ## Diagram przypadków użycia
 <img width="493" height="1131" alt="image" src="https://github.com/user-attachments/assets/faa830de-c21f-45af-a901-c808b99d7d25" />
