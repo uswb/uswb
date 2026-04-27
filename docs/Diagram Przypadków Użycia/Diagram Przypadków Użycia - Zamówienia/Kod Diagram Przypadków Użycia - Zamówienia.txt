@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Klient" as klient
+actor "System" as sys <<Automatyzacja>>
+
+package "Kontekst: Zamówienia" {
+  usecase "Skladanie zamówienia" as UC1
+  usecase "Sledzenie statusu zamówienia" as UC2
+  usecase "Przegladanie historii zamówien" as UC3
+  usecase "Automatyczna zmiana statusu" as UC4
+}
+
+klient --> UC1
+klient --> UC2
+klient --> UC3
+
+sys --> UC4
+@enduml
