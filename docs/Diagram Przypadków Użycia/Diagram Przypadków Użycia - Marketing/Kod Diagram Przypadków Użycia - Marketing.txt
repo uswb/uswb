@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Administrator / Marketing" as admin
+actor "Klient" as klient
+
+package "Kontekst: Marketing" {
+  usecase "Tworzenie kodów promocyjnych" as UC1
+  usecase "Zarządzanie waznoscia promocji" as UC2
+  usecase "Aplikowanie kodu rabatowego" as UC3
+}
+
+admin --> UC1
+admin --> UC2
+
+klient --> UC3
+@enduml
