@@ -47,3 +47,15 @@ Dodatkowo, proces finalizuje płatność. Każde zamówienie posiada powiązaną
 <img width="1195" height="439" alt="dostarczanie" src="https://github.com/user-attachments/assets/f6a5be9b-403c-4b0e-837d-891f209f6271" />
 <img width="483" height="563" alt="Diagram Przypadków Użycia - Dostarczanie" src="https://github.com/user-attachments/assets/74fb66dc-e147-45d7-8506-ee364c38f890" />
 
+### Kontekst Autentykacja
+<img width="762" height="340" alt="autentykacja" src="https://github.com/user-attachments/assets/63b589de-13ba-433f-9d9a-f52fa12bb9a8" />
+
+### Kontekst Marketing
+<img width="719" height="407" alt="marketing" src="https://github.com/user-attachments/assets/dba70d17-ceab-4feb-b0c0-75cace50bf6f" />
+
+### Kontekst Reklamacja
+<img width="916" height="454" alt="reklamacja" src="https://github.com/user-attachments/assets/3f533d9d-342d-45c0-ab53-b81e55c4d003" />
+
+### Kontekst Restaracje
+<img width="804" height="423" alt="restauracje" src="https://github.com/user-attachments/assets/2fb57865-b045-4636-bf29-c8d8ee23738a" />
+
