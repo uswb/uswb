@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Użytkownik (Klient/Kurier/Pracownik)" as user
+actor "Administrator" as admin
+
+package "Kontekst: Autentykacja" {
+  usecase "Utworzenie konta (Rejestracja)" as UC1
+  usecase "Logowanie do systemu" as UC2
+  usecase "Zarządzanie profilem i hasłem" as UC3
+  usecase "Zarządzanie kontami użytkowników" as UC4
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+
+admin --> UC2
+admin --> UC4
+@enduml
