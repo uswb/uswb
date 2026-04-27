@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Klient" as klient
+actor "Kurier" as kurier
+actor "System" as sys <<Automatyzacja>>
+
+package "Kontekst: Dostarczanie" {
+  usecase "Zarzadzanie adresami dostawy" as UC1
+  usecase "Aktualizacja statusu dostępnosci" as UC2
+  usecase "Odbiór zamówienia z lokalu" as UC3
+  usecase "Dostarczenie zamówienia do klienta" as UC4
+  usecase "Przypisanie zamówienia do kuriera" as UC5
+  usecase "Rejestrowanie czasów dostaw" as UC6
+}
+
+klient --> UC1
+
+kurier --> UC2
+kurier --> UC3
+kurier --> UC4
+
+sys --> UC5
+sys --> UC6
+@enduml
