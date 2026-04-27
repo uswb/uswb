@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Administrator / Pracownik lokalu" as admin
+actor "Klient" as klient
+
+package "Kontekst: Oferta" {
+  usecase "Zarzadzanie ofert\ produktowa (dodaj/usun)" as UC1
+  usecase "Zarzadzanie kategoriami menu" as UC2
+  usecase "Przegladanie dostepnego menu" as UC3
+  usecase "Zarzadzanie wariantami/cenami" as UC4
+}
+
+admin --> UC1
+admin --> UC2
+admin --> UC4
+
+klient --> UC3
+@enduml
